@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces Favoritos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 style="color:rgb(163, 126, 198);">Quais são seus doces favoritos?</h1>
+
+    <div class="container">
+        <!-- Lista de doces -->
+        <div id="Div1" class="box">
+            <h5 style="color: rgb(163, 126, 198);">Doces</h5>
+            <form>
+                <label><input type="checkbox" class="checkbox"> Brigadeiro</label><br>
+                <label><input type="checkbox" class="checkbox"> Beijinho</label><br>
+                <label><input type="checkbox" class="checkbox"> Bicho de Pé</label><br>
+                <label><input type="checkbox" class="checkbox"> Pé de moleque</label><br>
+                <label><input type="checkbox" class="checkbox"> Brigaderão</label><br>
+                <label><input type="checkbox" class="checkbox"> Pudim</label><br>
+                <label><input type="checkbox" class="checkbox"> Pé de moça</label><br>
+                <label><input type="checkbox" class="checkbox"> Jujuba</label><br>
+                <label><input type="checkbox" class="checkbox"> Bolo de Chocolate</label><br>
+                <label><input type="checkbox" class="checkbox"> Gelatina</label><br>
+                <label><input type="checkbox" class="checkbox"> Sorvete</label><br>
+            </form>
+            
+        </div>
+            <div class="mt-3">
+                <button onclick="Adicionar()" id="botao1" type="button" style="background-color: rgb(184, 142, 224); border-color: white;" ><p>Adicionar</p></button>
+                <button onclick="Remover()" id="botao2" type="button" style="background-color:rgb(163, 126, 198); border-color: white; " ><p>Remover</p></button>
+            </div>
+        <!-- Lista de selecionados -->
+        <div id="Div2" class="box">
+            <h5 style="color: rgb(163, 126, 198);">Selecionados</h5>
+            <!-- Aqui serão exibidos os itens selecionados -->
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
