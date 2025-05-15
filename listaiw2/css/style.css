@@ -37,13 +37,13 @@ p {
     padding-left: 20px;
     margin-top: 10px;
 }
-/* Garante que os labels dentro de .box fiquem um abaixo do outro */
+
 .box label {
   display: block;
   margin-bottom: 5px;
 }
 
-/* Remove espaçamentos duplicados causados por <br> (opcional, mas melhora visual) */
+
 .box br {
   display: none;
 }
