@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IW2A</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="height: 100%; margin: 0;">
+    <div class=" form-container" style="margin-top: 50px;">
+        <form id="userForm" onsubmit="event.preventDefault(); cadastrar();">
+            <div class="mb-3" style="">
+                <label for="nomeform" class="form-label">Nome</label>
+                <input class="form-control" id="nomeform">
+                <div class="form-text">Preencha com o seu nome completo!</div>
+            </div>
+            <div class="mb-3" style="">
+                <label for="emailform" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailform" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartilhe suas informações pessoais com ninguém.</div>
+            </div><br><br>
+            <div class="mb-3 form-check" style="display: flex; align-items: center; gap: 10px;">
+
+                <input type="checkbox"  style="background-color: rgb(191, 123, 197);"class="form-check-input" id="checkform">
+                <label class="form-check-label" for="checkform">Confirmo minhas informações.</label>
+            </div>
+              <br>
+            <button type="submit" class="btn btn-light" style="width: 50%;height: 50px;border: none;border-radius: 25px;background-image: linear-gradient(to right, rgb(233, 141, 241), rgb(151, 89, 141));color: white;font-weight: bold;font-family: Optima; align-items: center;">Cadastrar</button>
+        </form>
+        <br>
+        <ul id="lista" style="margin-left: 25px; background-color: violet ;"></ul>
+    </div>
+
+    <script>
+        let registros = [];
+
+        function cadastrar() {
+            const nome = document.getElementById("nomeform").value;
+            const email = document.getElementById("emailform").value;
+            const check = document.getElementById("checkform").checked;
+            // se todos os campos não forem preenchidos ele exibe uma mensagem de erro
+            if (nome && email && check) {
+                registros.push({ nome, email });
+                exibirRegistros();
+                document.getElementById("nomeform").value = "";
+                document.getElementById("emailform").value = "";
+                document.getElementById("checkform").checked = false;
+            } else {
+                alert("Preencha todos os campos e confirme suas informações!");
+            }
+        }
+
+        function exibirRegistros() {
+            const lista = document.getElementById("lista");
+            lista.innerHTML = "";
+            registros.forEach((registro, index) => {
+                lista.innerHTML += `<li>${index + 1}. ${registro.nome} - ${registro.email}</li>`;
+            });
+        }
+    </script>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

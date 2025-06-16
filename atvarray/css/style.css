@@ -1,0 +1,51 @@
+body {
+      margin: 0;
+      height: 100vh;
+      font-family: Optima;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #cc9dbf;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .form-control,
+    .form-check-input {
+      border-radius: 10px;
+    }
+
+    .btn-gradiente {
+      width: 100%;
+      height: 50px;
+      border: none;
+      border-radius: 25px;
+      background-image: linear-gradient(to right, pink, deeppink);
+      color: white;
+      font-weight: bold;
+      font-family: Optima;
+    }
+	.form-container {
+    background-color: #f9f1ff; 
+    padding: 30px;
+	margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 0 auto; 
+    font-family: Optima;
+}
+
+.cadastrar-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(198, 117, 206));
+    color: white;
+    font-weight: bold;
+}
